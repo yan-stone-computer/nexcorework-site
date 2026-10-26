@@ -1,0 +1,51 @@
+NexcoreWork 第三方组件与资源说明
+================================
+
+本文件列出 NexcoreWork 分发物中包含的第三方软件组件及其许可。完整清单（含使用方式、
+关键许可义务与自主开发边界）见 docs/竞赛/02-开源及第三方资源使用清单.md。
+
+运行时依赖（随安装包分发）
+--------------------------
+  electron 44.3.0                      MIT License          https://github.com/electron/electron
+  react / react-dom 19.3.0             MIT License          https://react.dev
+  @modelcontextprotocol/sdk 1.30.0     MIT License          https://modelcontextprotocol.io
+  lucide-react 1.45.0                  ISC License          https://lucide.dev
+  pdf-lib 1.17.1                       MIT License          https://pdf-lib.js.org
+  pdfjs-dist 6.3.289                   Apache License 2.0   https://mozilla.github.io/pdf.js/
+
+随安装包分发的第三方内容
+--------------------------
+  ponytail（「极简编码」方法论文本，中文改写） MIT License  https://github.com/DietrichGebert/ponytail
+    用途：作为内置技能文本随包分发（packages/catalog/skills/code-ponytail.md），并在系统提示里固定为默认开发范式。
+    义务：保留版权与许可声明——已在技能文件 frontmatter 的 author 字段与本清单中标注。
+  open-code-review（「代码审核」方法论文本，中文改写） Apache License 2.0  https://github.com/alibaba/open-code-review
+    用途：作为内置技能文本随包分发（packages/catalog/skills/code-review-ocr.md），并作为「代码审核员」
+          智能体与内置工具 builtin_review_rules（审核规则清单）的方法来源。
+    义务：保留版权与许可声明——已在技能文件 frontmatter 的 author 字段与本清单中标注。
+    范围：只改写方法与规则**类别**的中文表述，**未复制上游任何代码或二进制**（不含其 Go 可执行文件）。
+
+构建与测试工具（不随安装包分发）
+--------------------------------
+  vite 6.4.3                           MIT License          https://vite.dev
+  electron-builder 26.15.3             MIT License          https://github.com/electron-userland/electron-builder
+  typescript 5.9.3                     Apache License 2.0   https://www.typescriptlang.org
+  playwright-core 1.63.0               Apache License 2.0   https://playwright.dev
+  @types/node 22.20.2                  MIT License          https://github.com/DefinitelyTyped/DefinitelyTyped
+  @types/react 19.3.0                  MIT License          https://github.com/DefinitelyTyped/DefinitelyTyped
+  @types/react-dom 19.3.0              MIT License          https://github.com/DefinitelyTyped/DefinitelyTyped
+
+随 Electron 分发的 Chromium 与 Node.js 运行时的许可文件原样保留在安装目录中
+（LICENSE.electron.txt、LICENSES.chromium.html）。
+
+不随包分发的资源
+----------------
+  * 界面字体（HarmonyOS Sans SC / MiSans / PingFang SC / Microsoft YaHei / JetBrains Mono 等）
+    只按名称引用系统字体，未内嵌任何字体文件，因此不涉及字体再分发。
+  * 模型服务为第三方在线服务。产品内置硅基流动的三个免费模型端点（2 个对话 + 1 个语音识别），
+    源码里有一把**仅指向该免费端点**的出厂密钥（可吊销替换，也可在 .env 里换成自己的）；其余端点由使用者自备 API Key：
+    产品不再内置任何模型端点，模型页提供的是「免费额度」预设（地址与申请入口），
+    密钥由使用者申请后填写，保存在本机数据目录的 .env 明文文件里（仅当前用户可读），
+    程序启动时读入内存、退出即释放，不回显、不进导出。免费模型清单见
+    docs/免费模型申请清单.md。
+
+天枢序列团队自主开发的全部源码以 MIT 许可发布，详见 LICENSE。
