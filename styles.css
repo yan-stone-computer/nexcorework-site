@@ -60,6 +60,8 @@ button { font: inherit; color: inherit; }
 .button-accent:hover { background: #dcff8f; }
 .button-quiet { border-color: rgba(240, 238, 229, .24); color: var(--paper); }
 .button-quiet:hover { background: rgba(240, 238, 229, .08); }
+.button-live { border-color: rgba(201, 247, 92, .36); background: rgba(201, 247, 92, .08); color: var(--acid); }
+.button-live:hover { background: var(--acid); color: var(--ink); border-color: var(--acid); }
 .button span { font-size: 18px; }
 .hero-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 52px 0 0; border-top: 1px solid var(--line-dark); }
 .hero-stats div { padding: 18px 16px 0 0; }
