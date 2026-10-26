@@ -227,8 +227,8 @@ button { font: inherit; color: inherit; }
   .site-header .brand strong { font-size: 18px; }
   .site-header .brand small, .header-cta { display: none; }
   .menu-toggle { display: block; }
-  .site-header nav { position: fixed; inset: 64px 0 auto; display: grid; gap: 0; padding: 18px; background: #0b110e; border-bottom: 1px solid var(--line-dark); transform: translateY(-110%); transition: transform 260ms var(--ease); }
-  .menu-open .site-header nav { transform: translateY(0); }
+    .site-header nav { position: fixed; inset: 64px 0 auto; display: grid; gap: 0; padding: 18px; background: #0b110e; border-bottom: 1px solid var(--line-dark); transform: translateY(-110%); visibility: hidden; pointer-events: none; transition: transform 260ms var(--ease), visibility 0s linear 260ms; }
+    .menu-open .site-header nav { transform: translateY(0); visibility: visible; pointer-events: auto; transition-delay: 0s; }
   .site-header nav a { padding: 16px 4px; border-bottom: 1px solid var(--line-dark); font-size: 17px; color: var(--paper); }
   .menu-open .menu-toggle i:first-child { transform: translateY(2.5px) rotate(45deg); }
   .menu-open .menu-toggle i:last-child { transform: translateY(-2.5px) rotate(-45deg); }
