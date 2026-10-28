@@ -53,6 +53,7 @@ button{font:inherit;color:inherit}
 .menu-open .menu-toggle i:last-child{transform:translateY(-2.5px) rotate(-45deg)}
 .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:43px;padding:10px 17px;border:1px solid transparent;border-radius:7px;font-size:13px;font-weight:650;transition:transform .16s var(--ease),background .16s ease,border-color .16s ease}
 .button:hover{transform:translateY(-1px)}.button:active{transform:scale(.97)}.button span{font-size:16px}
+.brand:focus-visible,.windows-grid a:focus-visible,.android-gallery a:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid rgba(14,155,199,.42);outline-offset:3px}
 .button:focus-visible,.site-header nav a:focus-visible,.menu-toggle:focus-visible,.text-link:focus-visible{outline:3px solid rgba(14,155,199,.42);outline-offset:3px}
 .button-primary{background:var(--accent-solid);border-color:var(--accent);color:var(--paper)}.button-primary:hover{background:#0b80a9}
 .button-secondary{background:var(--surface);border-color:var(--line-strong);color:var(--ink)}.button-secondary:hover{background:var(--surface-subtle)}
