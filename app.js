@@ -1,5 +1,6 @@
 const menuButton = document.getElementById("menuToggle");
 const nav = document.getElementById("siteNav");
+document.documentElement.classList.add("motion-ready");
 
 function setMenu(open) {
   document.body.classList.toggle("menu-open", open);

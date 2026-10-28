@@ -3,111 +3,156 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101914">
-    <meta name="description" content="NexcoreWork Android 手机端：通过同一局域网内的 Noise 端到端加密通道控制电脑工作区、查看任务、审批操作与接收通知。">
-    <title>NexcoreWork Android · 把电脑工作区装进口袋</title>
+    <meta name="theme-color" content="#f7f8fa">
+    <meta name="description" content="NexcoreWork Android 手机端：在同一局域网内通过端到端加密控制电脑工作区、查看任务、审批操作并接收通知。">
+    <title>NexcoreWork Android · 在手机上继续电脑工作区</title>
     <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="android.css">
-    <link rel="stylesheet" href="nexcore-dark.css">
+    <link rel="stylesheet" href="styles.css?v=20261028">
+    <link rel="stylesheet" href="android.css?v=20261028">
   </head>
-  <body>
+  <body class="android-page">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="NexcoreWork 首页">
-        <img src="assets/brand/logo.svg" width="42" height="42" alt="">
-        <span><strong>Nexcore<span>Work</span></strong><small>启核 · 本地智能体工作台</small></span>
-      </a>
-      <nav id="siteNav" aria-label="主导航">
-        <a href="index.html">首页</a>
-        <a href="index.html#workbench">工作台</a>
-        <a href="index.html#models">模型路由</a>
-        <a href="android.html" aria-current="page">Android</a>
-      </nav>
-      <a class="header-cta" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 APK</a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="打开导航"><i></i><i></i></button>
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NexcoreWork 首页">
+          <img src="assets/brand/logo.svg" width="38" height="38" alt="">
+          <span><strong>Nexcore<span>Work</span></strong><small>启核 · 本地智能体工作台</small></span>
+        </a>
+        <nav id="siteNav" aria-label="主导航">
+          <a href="index.html#platform">工作台</a>
+          <a href="index.html#execution">执行证据</a>
+          <a href="index.html#windows">Windows</a>
+          <a href="index.html#models">模型路由</a>
+          <a href="android.html" aria-current="page">Android</a>
+        </nav>
+        <div class="header-actions">
+          <span class="version">Mobile 2.0</span>
+          <a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 APK</a>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="打开导航"><i></i><i></i></button>
+        </div>
+      </div>
     </header>
 
     <main id="main">
       <section class="android-hero">
-        <div class="android-copy">
-          <p class="eyebrow"><span></span> NEXCOREWORK MOBILE · ANDROID</p>
-          <h1>把电脑工作区，<br><em>装进口袋。</em></h1>
-          <p class="lead">手机不是另一套智能体，而是电脑工作台的远程控制面。查看任务、审批操作、读取产物、继续对话，全部通过同一局域网内的 Noise 端到端加密通道完成。</p>
-          <div class="hero-actions">
-            <a class="button button-accent" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 Android APK <span>↓</span></a>
-            <a class="button button-quiet" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe">先安装 Windows 电脑端 <span>↓</span></a>
+        <div class="android-hero-inner shell">
+          <div class="android-hero-copy">
+            <h1>电脑继续执行，<br><span>手机随时接手。</span></h1>
+            <p class="android-lead">手机不是另一套智能体。连接同一局域网后，你可以查看任务、审批操作、读取交付物，并让项目始终留在电脑上。</p>
+            <div class="android-actions">
+              <a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 Android 2.0 <span>→</span></a>
+              <a class="button button-secondary" href="#connect">查看连接步骤 <span>↓</span></a>
+            </div>
+            <dl class="android-facts">
+              <div><dt>Noise</dt><dd>端到端加密通道</dd></div>
+              <div><dt>1 台</dt><dd>电脑就是唯一执行端</dd></div>
+              <div><dt>30 天</dt><dd>设备令牌随时可撤销</dd></div>
+            </dl>
           </div>
-          <dl class="android-facts">
-            <div><dt>E2E</dt><dd>Noise 端到端加密</dd></div>
-            <div><dt>LAN</dt><dd>任务始终留在电脑</dd></div>
-            <div><dt>30d</dt><dd>设备令牌可随时撤销</dd></div>
-          </dl>
+
+          <div class="android-device-stage" aria-label="NexcoreWork Android 界面预览">
+            <div class="device-halo" aria-hidden="true"></div>
+            <figure class="android-device android-device-back">
+              <img src="assets/screens/android-02-任务与复制.webp" width="390" height="844" alt="手机端任务消息与复制操作" fetchpriority="high">
+            </figure>
+            <figure class="android-device android-device-front">
+              <img src="assets/screens/android-01-手机工作区.webp" width="390" height="844" alt="手机端单栏工作区" fetchpriority="high">
+            </figure>
+            <a class="android-qr-chip" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">
+              <img src="assets/brand/android-download.png" width="96" height="96" alt="">
+              <span><b>扫码安装 APK</b><small>Android 7.0+ · ARM64</small></span>
+            </a>
+          </div>
         </div>
-        <figure class="android-download-card">
-          <img src="assets/brand/android-download.png" width="280" height="280" alt="Android APK 下载二维码">
-          <figcaption><strong>扫码下载 APK</strong><small>Android 7.0+ · APK v2 签名</small></figcaption>
-        </figure>
       </section>
 
-      <section class="android-steps">
-        <div class="section-heading">
-          <p class="section-kicker">三步连接</p>
-          <h2>电脑负责执行，<br>手机负责掌控。</h2>
+      <section class="android-benefits">
+        <div class="shell benefit-rail">
+          <article><b>项目不搬家</b><span>文件、SQLite、记忆和工具执行都留在电脑。</span></article>
+          <article><b>审批不缺席</b><span>高风险操作在手机上确认，锁屏也能收到通知。</span></article>
+          <article><b>输出可带走</b><span>任务结果、文件和会话内容可复制或继续查看。</span></article>
         </div>
-        <ol>
-          <li><span>01</span><strong>安装并启动电脑端</strong><p>在 Windows 电脑上运行 NexcoreWork 2.0.0，新建或选择工作区。</p></li>
-          <li><span>02</span><strong>手机安装 APK</strong><p>扫描本页二维码下载，并在 Android 系统里允许本次安装未知来源应用。</p></li>
-          <li><span>03</span><strong>扫描电脑连接码</strong><p>电脑设置 → 手机控制 → 生成配对码，再用 NexcoreWork 手机端内扫描。两端必须在同一局域网。</p></li>
-        </ol>
       </section>
 
-      <section class="android-gallery">
-        <div class="section-heading">
-          <p class="section-kicker">真实运行截图</p>
-          <h2>更适合手机的操作面。</h2>
-          <p>独立单栏布局、对话菜单、审批、设备权限和二维码配对，不是桌面页面的简单缩小版。</p>
+      <section class="android-connect section" id="connect">
+        <div class="shell android-connect-layout">
+          <div class="android-connect-copy reveal">
+            <h2>三步连上电脑，<br>开始远程工作。</h2>
+            <p>首次连接使用一次性配对信息。验证电脑身份后，后续请求都在加密通道里传输，不需要把项目复制到手机。</p>
+            <a class="text-link" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe">先安装 Windows 电脑端 <span>→</span></a>
+          </div>
+          <ol class="connect-steps reveal">
+            <li><span>01</span><div><b>电脑端生成连接码</b><p>打开「设置 → 手机控制」，确认当前局域网和可访问工作区。</p></div></li>
+            <li><span>02</span><div><b>手机扫码核对身份</b><p>安装 APK 后用手机端扫码，核对电脑名称与证书指纹。</p></div></li>
+            <li><span>03</span><div><b>选择工作区和权限</b><p>只允许手机在工作区范围操作，审批与任务通知随即可用。</p></div></li>
+          </ol>
         </div>
-        <div class="android-grid">
-          <figure><img src="assets/screens/android-05-端到端配对.webp" width="1080" height="2400" alt="手机扫描电脑配对码" loading="lazy"><figcaption>一次扫码，先核对电脑身份指纹</figcaption></figure>
-          <figure><img src="assets/screens/android-04-原生通知与审批.webp" width="1080" height="2400" alt="手机端审批与任务通知" loading="lazy"><figcaption>审批与任务结果直达锁屏通知</figcaption></figure>
-          <figure><img src="assets/screens/android-01-手机工作区.webp" width="390" height="844" alt="手机端单栏工作区" loading="lazy"><figcaption>只保留任务、消息与审批</figcaption></figure>
-          <figure><img src="assets/screens/android-02-任务与复制.webp" width="390" height="844" alt="手机端任务消息与复制操作" loading="lazy"><figcaption>复制、修改、重新生成都在气泡下方</figcaption></figure>
+      </section>
+
+      <section class="android-gallery-section">
+        <div class="shell">
+          <div class="android-gallery-head reveal">
+            <h2>单手操作重新排过，<br>不是桌面端缩小版。</h2>
+            <p>任务、消息、审批和交付物都保持单栏结构。输入框、复制、修改与重新生成放在拇指容易触达的位置。</p>
+          </div>
+          <div class="android-gallery reveal">
+            <figure class="gallery-main">
+              <img src="assets/screens/android-01-手机工作区.webp" width="390" height="844" alt="手机端工作区首屏" loading="lazy">
+              <figcaption><b>单栏工作区</b><span>只保留任务、消息和审批</span></figcaption>
+            </figure>
+            <figure>
+              <img src="assets/screens/android-02-任务与复制.webp" width="390" height="844" alt="手机端对话与消息操作" loading="lazy">
+              <figcaption><b>消息操作</b><span>复制、修改与重新生成</span></figcaption>
+            </figure>
+            <figure>
+              <img src="assets/screens/android-04-原生通知与审批.webp" width="390" height="844" alt="手机端原生通知与审批" loading="lazy">
+              <figcaption><b>原生通知</b><span>审批和结果直达锁屏</span></figcaption>
+            </figure>
+            <figure>
+              <img src="assets/screens/android-05-端到端配对.webp" width="390" height="844" alt="手机端扫码配对电脑" loading="lazy">
+              <figcaption><b>一次配对</b><span>核对电脑身份与权限</span></figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
       <section class="android-security">
-        <div>
-          <p class="section-kicker">控制权不离开你</p>
-          <h2>端到端加密，<br>权限由电脑钳制。</h2>
-        </div>
-        <div class="android-security-grid">
-          <article><strong>Noise_XXpsk0</strong><p>一次性 PSK 与电脑公钥通过二维码交给手机，后续请求全部在加密 WebSocket 内传输。</p></article>
-          <article><strong>服务端权限钳制</strong><p>即使手机伪造“完全权限”，服务端也只允许电脑总工作区，无法逃逸到整块磁盘。</p></article>
-          <article><strong>设备可撤销</strong><p>设备令牌只存摘要，撤销后当前加密连接立即断开，推送订阅同步删除。</p></article>
-          <article><strong>数据仍在电脑</strong><p>模型、SQLite、项目记忆、附件和工具执行都留在电脑端，手机只负责控制与结果展示。</p></article>
+        <div class="shell android-security-layout">
+          <div class="android-security-intro reveal">
+            <h2>控制权仍然<br>在电脑这一端。</h2>
+            <p>手机只发送经过授权的请求。模型、文件、工作区和工具执行不离开电脑。</p>
+          </div>
+          <div class="security-proof reveal">
+            <article><span>ENCRYPTION</span><b>Noise_XXpsk0</b><p>一次性 PSK 与电脑公钥通过连接码交给手机，后续请求全部进入加密 WebSocket。</p></article>
+            <article><span>BOUNDARY</span><b>服务端权限钳制</b><p>即使手机伪造权限声明，也只能访问电脑端允许的总工作区。</p></article>
+            <article><span>REVOKE</span><b>设备令牌可撤销</b><p>撤销后当前加密连接立即断开，通知订阅同步失效。</p></article>
+            <article><span>LOCAL DATA</span><b>项目始终留在电脑</b><p>手机不保存模型密钥、项目记忆和完整工作区。</p></article>
+          </div>
         </div>
       </section>
 
-      <section class="download">
-        <div class="download-copy">
-          <p class="section-kicker">ANDROID 7.0+ · ARM64</p>
-          <h2>手机上继续，<br>电脑上完成。</h2>
-          <p>建议先安装 Windows 桌面端，再通过电脑端生成一次性连接二维码。</p>
-        </div>
-        <div class="download-card">
-          <div><span>NEXCOREWORK MOBILE</span><b>2.0.0</b></div>
-          <a class="button button-accent" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 APK <span>↓</span></a>
-          <small>当前为可安装的开发签名 APK，不是应用商店发布包。首次安装需在 Android 设置中允许本次安装。</small>
+      <section class="download-section android-download">
+        <div class="download-inner shell reveal">
+          <div>
+            <h2>把电脑工作区<br>带在身边。</h2>
+            <p>Android 7.0 及以上，ARM64 设备。首次安装需要在系统中允许安装未知来源应用。</p>
+          </div>
+          <div class="download-actions">
+            <a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 APK 2.0.0 <span>→</span></a>
+            <a class="button button-secondary" href="index.html#windows">下载 Windows 端 <span>→</span></a>
+            <small>APK v2 签名 · ARM64<br>需要与电脑处于同一局域网</small>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand-footer" href="index.html"><img src="assets/brand/logo.svg" width="34" height="34" alt=""><span><strong>NexcoreWork</strong><small>本地 · 私有 · 可核验</small></span></a>
-      <p>让智能体真的能做事，而且每一步都看得见。</p>
-      <div><a href="index.html">首页</a><a href="index.html#download">Windows</a><a href="android.html">Android</a></div>
-      <small>© 2026 NexcoreWork</small>
+      <div class="shell footer-inner">
+        <a class="brand" href="index.html"><img src="assets/brand/logo.svg" width="32" height="32" alt=""><span><strong>Nexcore<span>Work</span></strong><small>本地 · 私有 · 可核验</small></span></a>
+        <p>让智能体真的能做事，而且每一步都看得见。</p>
+        <div><a href="index.html">首页</a><a href="index.html#windows">Windows</a><a href="android.html" aria-current="page">Android</a></div>
+        <small>© 2026 NexcoreWork</small>
+      </div>
     </footer>
     <script src="app.js" defer></script>
   </body>
