@@ -190,7 +190,7 @@
                   <p>应用设置、会话、用量和加密密钥存入本地 SQLite；附件、产物和项目记忆留在用户选择的工作区。</p>
                   <ul><li>API Key 加密保存，重启后恢复</li><li>模型、单价、权限与界面设置持久化</li><li>工作区可备份、迁移和删除</li></ul>
                 </div>
-                <figure class="diagram-frame"><img src="assets/diagrams/storage.svg" width="960" height="540" alt="NexcoreWork 本地存储架构图" loading="lazy"><figcaption>业务状态与项目文件分区保存，避免应用升级影响工作区。</figcaption></figure>
+                <figure class="diagram-frame"><img src="assets/diagrams/storage.svg" width="960" height="540" alt="NexcoreWork 本地存储架构图"><figcaption>业务状态与项目文件分区保存，避免应用升级影响工作区。</figcaption></figure>
               </article>
 
               <article class="architecture-panel" id="panel-vision" role="tabpanel" aria-labelledby="tab-vision" hidden>
@@ -199,7 +199,7 @@
                   <p>图片先经过本地 OCR、结构提取和免费视觉模型，融合成可追溯证据，再交给文本主模型，避免整张原图挤占对话上下文。</p>
                   <ul><li>图片与文档可批量进入视觉队列</li><li>免费视觉模型与外部多模态可配置</li><li>文本、版面、对象与来源一起交付</li></ul>
                 </div>
-                <figure class="diagram-frame"><img src="assets/diagrams/vision.svg" width="960" height="540" alt="NexcoreWork 视觉识别架构图" loading="lazy"><figcaption>原始图片留在本地，主模型只接收压缩后的结构化证据。</figcaption></figure>
+                <figure class="diagram-frame"><img src="assets/diagrams/vision.svg" width="960" height="540" alt="NexcoreWork 视觉识别架构图"><figcaption>原始图片留在本地，主模型只接收压缩后的结构化证据。</figcaption></figure>
               </article>
 
               <article class="architecture-panel" id="panel-agent" role="tabpanel" aria-labelledby="tab-agent" hidden>
@@ -208,7 +208,7 @@
                   <p>规划器只决定下一步，真正的工作由工具完成。每一步结果回到观察节点，再由模型决定继续、修正还是交付。</p>
                   <ul><li>模型判断下一步，系统负责执行与记账</li><li>工具错误可被读取并进入修正循环</li><li>交付门禁检查文件、路径和运行证据</li></ul>
                 </div>
-                <figure class="diagram-frame"><img src="assets/diagrams/agent-loop.svg" width="960" height="540" alt="NexcoreWork Agent 执行闭环架构图" loading="lazy"><figcaption>规划、调用、观察和证据写入组成一个可持续执行的闭环。</figcaption></figure>
+                <figure class="diagram-frame"><img src="assets/diagrams/agent-loop.svg" width="960" height="540" alt="NexcoreWork Agent 执行闭环架构图"><figcaption>规划、调用、观察和证据写入组成一个可持续执行的闭环。</figcaption></figure>
               </article>
 
               <article class="architecture-panel" id="panel-context" role="tabpanel" aria-labelledby="tab-context" hidden>
@@ -217,7 +217,7 @@
                   <p>固定规则、项目注入、对话历史和当前输入分区计量。超限时优先压缩历史，保留约束、关键路径和可回读原文。</p>
                   <ul><li>系统规则和验收条件不会被优先裁掉</li><li>压缩只改变本轮注入，不删除原始记录</li><li>工具结果和文件记录可以按需重新读取</li></ul>
                 </div>
-                <figure class="diagram-frame"><img src="assets/diagrams/context.svg" width="960" height="540" alt="NexcoreWork 四区块上下文治理架构图" loading="lazy"><figcaption>上下文预算按优先级分配，超限时压缩低价值历史。</figcaption></figure>
+                <figure class="diagram-frame"><img src="assets/diagrams/context.svg" width="960" height="540" alt="NexcoreWork 四区块上下文治理架构图"><figcaption>上下文预算按优先级分配，超限时压缩低价值历史。</figcaption></figure>
               </article>
 
               <article class="architecture-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security" hidden>
@@ -226,7 +226,7 @@
                   <p>每次工具请求先经过策略引擎和服务端校验。文件、命令、网络和密钥读取分别受控，高风险操作绑定当前内容请求审批。</p>
                   <ul><li>路径限制在用户选择的工作区内</li><li>审批、执行与拒绝都会留下回执</li><li>敏感值只在本地解密并对输出脱敏</li></ul>
                 </div>
-                <figure class="diagram-frame"><img src="assets/diagrams/security.svg" width="960" height="540" alt="NexcoreWork 工具权限与工作区边界架构图" loading="lazy"><figcaption>权限策略在工具调用之前生效，执行结果进入审计记录。</figcaption></figure>
+                <figure class="diagram-frame"><img src="assets/diagrams/security.svg" width="960" height="540" alt="NexcoreWork 工具权限与工作区边界架构图"><figcaption>权限策略在工具调用之前生效，执行结果进入审计记录。</figcaption></figure>
               </article>
             </div>
           </div>
