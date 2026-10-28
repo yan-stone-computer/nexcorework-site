@@ -1,6 +1,66 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.documentElement.classList.add("motion-ready");
 
+function canUseShader() {
+  const connection = navigator.connection;
+  if (reduceMotion || connection?.saveData || (navigator.deviceMemory || 8) <= 2 || (navigator.hardwareConcurrency || 8) <= 2) return false;
+  const probe = document.createElement("canvas");
+  const gl = probe.getContext("webgl2", { failIfMajorPerformanceCaveat: true });
+  gl?.getExtension("WEBGL_lose_context")?.loseContext();
+  return Boolean(gl);
+}
+
+function mountHeroShader() {
+  const host = document.querySelector(".hero-atmosphere");
+  const library = window.PaperShaders;
+  if (!host || !library || !canUseShader()) {
+    document.documentElement.dataset.heroShader = "off";
+    return;
+  }
+  const surface = document.createElement("div");
+  surface.className = "hero-shader";
+  surface.setAttribute("aria-hidden", "true");
+  host.prepend(surface);
+  try {
+    const colors = ["#f8fdfb", "#dff7ee", "#c6f0ef", "#daf0fb", "#f8fbfa"];
+    const mount = new library.ShaderMount(
+      surface,
+      library.meshGradientFragmentShader,
+      {
+        u_colors: colors.map(library.getShaderColorFromString),
+        u_colorsCount: colors.length,
+        u_distortion: 0.78,
+        u_swirl: 0.2,
+        u_grainMixer: 0.015,
+        u_grainOverlay: 0.02,
+        u_fit: library.ShaderFitOptions.cover,
+        u_scale: 1.05,
+        u_rotation: 0,
+        u_offsetX: 0,
+        u_offsetY: 0,
+        u_originX: 0.5,
+        u_originY: 0.5,
+        u_worldWidth: 0,
+        u_worldHeight: 0
+      },
+      { alpha: true, antialias: false, depth: false, stencil: false, powerPreference: "low-power" },
+      0.07,
+      0,
+      1,
+      1_500_000
+    );
+    surface.classList.add("is-live");
+    host.classList.add("has-shader");
+    document.documentElement.dataset.heroShader = "on";
+    addEventListener("pagehide", () => mount.dispose(), { once: true });
+  } catch {
+    surface.remove();
+    document.documentElement.dataset.heroShader = "off";
+  }
+}
+
+mountHeroShader();
+
 const menuButton = document.getElementById("menuToggle");
 const nav = document.getElementById("siteNav");
 
