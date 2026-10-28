@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">NexcoreWork Agent 执行闭环</title>
+  <desc id="desc">任务进入规划器后，反复经历决策、调用工具、读取结果和记录证据，最后由交付门禁核验文件与运行结果。项目记忆在每一轮开始前读取，结束后写回。</desc>
+  <defs>
+    <marker id="arrow-agent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#0b8797"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7fbfc"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <g id="n:task">
+      <rect x="42" y="190" width="152" height="140" rx="20" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <circle cx="118" cy="230" r="24" fill="#e2f7f5"/>
+      <path d="M106 230h24M118 218v24" stroke="#0aa8cf" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="118" y="280" text-anchor="middle" font-size="19" font-weight="700" fill="#18323b">用户任务</text>
+      <text x="118" y="305" text-anchor="middle" font-size="13" fill="#58737d">目标与验收条件</text>
+    </g>
+    <g id="n:planner">
+      <rect x="232" y="166" width="156" height="188" rx="20" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="260" y="204" font-size="13" font-weight="700" fill="#0b7d6c" letter-spacing="1.1">PLANNER</text>
+      <text x="260" y="236" font-size="20" font-weight="700" fill="#18323b">任务规划</text>
+      <text x="260" y="269" font-size="13" fill="#58737d">拆解步骤</text>
+      <text x="260" y="293" font-size="13" fill="#58737d">确定工具与边界</text>
+      <text x="260" y="317" font-size="13" fill="#58737d">建立验收项</text>
+    </g>
+
+    <circle cx="565" cy="258" r="132" fill="none" stroke="#b8ded9" stroke-width="2" stroke-dasharray="7 7"/>
+    <text x="565" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#0d7387" letter-spacing="1.2">AGENT LOOP</text>
+    <g id="n:reason">
+      <rect x="470" y="142" width="190" height="58" rx="12" fill="#ffffff" stroke="#bcdce4"/>
+      <text x="565" y="167" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">判断下一步</text>
+      <text x="565" y="187" text-anchor="middle" font-size="12" fill="#58737d">读取当前证据</text>
+    </g>
+    <g id="n:tool-call">
+      <rect x="650" y="226" width="154" height="64" rx="12" fill="#10272f"/>
+      <text x="727" y="252" text-anchor="middle" font-size="17" font-weight="700" fill="#f4fbfc">调用工具</text>
+      <text x="727" y="273" text-anchor="middle" font-size="12" fill="#bad3d9">参数与权限校验</text>
+    </g>
+    <g id="n:observe">
+      <rect x="470" y="318" width="190" height="58" rx="12" fill="#ffffff" stroke="#bcdce4"/>
+      <text x="565" y="343" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">读取结果</text>
+      <text x="565" y="363" text-anchor="middle" font-size="12" fill="#58737d">工具回执与错误</text>
+    </g>
+    <g id="n:gate">
+      <rect x="826" y="176" width="104" height="168" rx="18" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="878" y="220" text-anchor="middle" font-size="16" font-weight="700" fill="#18323b">交付</text>
+      <text x="878" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#18323b">门禁</text>
+      <text x="878" y="280" text-anchor="middle" font-size="12" fill="#58737d">结果</text>
+      <text x="878" y="302" text-anchor="middle" font-size="12" fill="#58737d">路径</text>
+      <text x="878" y="324" text-anchor="middle" font-size="12" fill="#58737d">证据</text>
+    </g>
+
+    <g fill="none" stroke="#0b8797" stroke-width="2.4" marker-end="url(#arrow-agent)">
+      <path d="M194 258h38"/>
+      <path d="M388 255h58"/>
+      <path d="M660 186v28"/>
+      <path d="M765 289v47H660"/>
+      <path d="M470 347h-32V171h32"/>
+      <path d="M804 258h22"/>
+    </g>
+    <path d="M825 355v72H118v-77" fill="none" stroke="#18b795" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow-agent)"/>
+    <text x="370" y="466" font-size="14" fill="#466873">记忆在任务前召回，执行证据在每一步写回</text>
+  </g>
+</svg>

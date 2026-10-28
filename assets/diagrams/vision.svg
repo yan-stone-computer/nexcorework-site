@@ -64,7 +64,6 @@
       <path d="M632 245h36"/>
       <path d="M818 245h34"/>
     </g>
-    <path d="M360 390h360" fill="none" stroke="#18b795" stroke-width="2" stroke-dasharray="7 7"/>
-    <text x="420" y="418" font-size="14" fill="#466873">原始大图留在本地，只向主模型提交结构化证据</text>
+    <text x="480" y="422" text-anchor="middle" font-size="15" fill="#466873">原始大图留在本地，只向主模型提交结构化证据</text>
   </g>
 </svg>

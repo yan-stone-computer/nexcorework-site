@@ -8,7 +8,7 @@
     <title>NexcoreWork 启核 · 本地智能体工作台</title>
     <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
     <link rel="preload" as="image" href="assets/screens/12-深色主题.webp">
-    <link rel="stylesheet" href="styles.css?v=20261028c">
+    <link rel="stylesheet" href="styles.css?v=20261028d">
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
@@ -148,8 +148,9 @@
         <div class="architecture-glow" aria-hidden="true"></div>
         <div class="shell">
           <div class="architecture-head" data-reveal>
-            <h2>三条底层链路，<br>支撑智能体工作。</h2>
-            <p>记忆、存储和视觉不是三个营销词。它们决定智能体能否跨轮次继续、数据是否可控，以及图片是否真的被理解。</p>
+            <h2>六条核心架构，<br>支撑智能体工作。</h2>
+            <p>记忆、存储、视觉、执行、上下文与权限共同决定智能体能否跨轮次继续、稳定完成任务，并守住数据与工具边界。</p>
+            <a class="architecture-article-link" href="https://yan-stone-computer.github.io/Nexcore/#architecture" target="_blank" rel="noreferrer">阅读团队架构文章 <span>↗</span></a>
           </div>
           <div class="architecture-shell" data-reveal>
             <div class="architecture-tabs" role="tablist" aria-label="核心架构">
@@ -161,6 +162,15 @@
               </button>
               <button class="architecture-tab" id="tab-vision" type="button" role="tab" aria-selected="false" aria-controls="panel-vision" data-architecture="vision" tabindex="-1">
                 <span>03</span><div><b>视觉链路</b><small>把图片变成证据</small></div>
+              </button>
+              <button class="architecture-tab" id="tab-agent" type="button" role="tab" aria-selected="false" aria-controls="panel-agent" data-architecture="agent" tabindex="-1">
+                <span>04</span><div><b>执行闭环</b><small>判断、调用与复核</small></div>
+              </button>
+              <button class="architecture-tab" id="tab-context" type="button" role="tab" aria-selected="false" aria-controls="panel-context" data-architecture="context" tabindex="-1">
+                <span>05</span><div><b>上下文治理</b><small>长任务稳定续接</small></div>
+              </button>
+              <button class="architecture-tab" id="tab-security" type="button" role="tab" aria-selected="false" aria-controls="panel-security" data-architecture="security" tabindex="-1">
+                <span>06</span><div><b>权限边界</b><small>工具执行不越界</small></div>
               </button>
             </div>
 
@@ -190,6 +200,33 @@
                   <ul><li>图片与文档可批量进入视觉队列</li><li>免费视觉模型与外部多模态可配置</li><li>文本、版面、对象与来源一起交付</li></ul>
                 </div>
                 <figure class="diagram-frame"><img src="assets/diagrams/vision.svg" width="960" height="540" alt="NexcoreWork 视觉识别架构图" loading="lazy"><figcaption>原始图片留在本地，主模型只接收压缩后的结构化证据。</figcaption></figure>
+              </article>
+
+              <article class="architecture-panel" id="panel-agent" role="tabpanel" aria-labelledby="tab-agent" hidden>
+                <div class="panel-copy">
+                  <h3>Agent 执行闭环比一次生成更重要</h3>
+                  <p>规划器只决定下一步，真正的工作由工具完成。每一步结果回到观察节点，再由模型决定继续、修正还是交付。</p>
+                  <ul><li>模型判断下一步，系统负责执行与记账</li><li>工具错误可被读取并进入修正循环</li><li>交付门禁检查文件、路径和运行证据</li></ul>
+                </div>
+                <figure class="diagram-frame"><img src="assets/diagrams/agent-loop.svg" width="960" height="540" alt="NexcoreWork Agent 执行闭环架构图" loading="lazy"><figcaption>规划、调用、观察和证据写入组成一个可持续执行的闭环。</figcaption></figure>
+              </article>
+
+              <article class="architecture-panel" id="panel-context" role="tabpanel" aria-labelledby="tab-context" hidden>
+                <div class="panel-copy">
+                  <h3>长任务先管上下文，再谈换大模型</h3>
+                  <p>固定规则、项目注入、对话历史和当前输入分区计量。超限时优先压缩历史，保留约束、关键路径和可回读原文。</p>
+                  <ul><li>系统规则和验收条件不会被优先裁掉</li><li>压缩只改变本轮注入，不删除原始记录</li><li>工具结果和文件记录可以按需重新读取</li></ul>
+                </div>
+                <figure class="diagram-frame"><img src="assets/diagrams/context.svg" width="960" height="540" alt="NexcoreWork 四区块上下文治理架构图" loading="lazy"><figcaption>上下文预算按优先级分配，超限时压缩低价值历史。</figcaption></figure>
+              </article>
+
+              <article class="architecture-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security" hidden>
+                <div class="panel-copy">
+                  <h3>工具能做什么，由权限边界决定</h3>
+                  <p>每次工具请求先经过策略引擎和服务端校验。文件、命令、网络和密钥读取分别受控，高风险操作绑定当前内容请求审批。</p>
+                  <ul><li>路径限制在用户选择的工作区内</li><li>审批、执行与拒绝都会留下回执</li><li>敏感值只在本地解密并对输出脱敏</li></ul>
+                </div>
+                <figure class="diagram-frame"><img src="assets/diagrams/security.svg" width="960" height="540" alt="NexcoreWork 工具权限与工作区边界架构图" loading="lazy"><figcaption>权限策略在工具调用之前生效，执行结果进入审计记录。</figcaption></figure>
               </article>
             </div>
           </div>

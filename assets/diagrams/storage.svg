@@ -43,10 +43,9 @@
 
     <g fill="none" stroke="#0b8797" stroke-width="2.4" marker-end="url(#arrow-storage)">
       <path d="M246 258h62"/>
-      <path d="M508 226h68v-62h68"/>
-      <path d="M508 290h68v92h68"/>
+      <path d="M508 226h68v-62h74"/>
+      <path d="M508 290h68v92h74"/>
     </g>
-    <path d="M246 438h278" fill="none" stroke="#18b795" stroke-width="2" stroke-dasharray="7 7"/>
-    <text x="260" y="466" font-size="14" fill="#466873">导出与备份不改变工作区结构</text>
+    <text x="480" y="474" text-anchor="middle" font-size="14" fill="#466873">导出与备份不改变工作区结构</text>
   </g>
 </svg>

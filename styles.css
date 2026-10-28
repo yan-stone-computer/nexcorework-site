@@ -173,6 +173,9 @@ button{font:inherit;color:inherit}
 .architecture>.shell{position:relative;z-index:1}
 .architecture-head{display:grid;grid-template-columns:1fr .67fr;gap:70px;align-items:end;margin-bottom:48px}
 .architecture-head>p{margin:0}
+.architecture-article-link{grid-column:2;justify-self:start;display:inline-flex;gap:7px;padding-bottom:3px;border-bottom:1px solid #a9dde4;color:var(--cyan-solid);font-size:12px;font-weight:700}
+.architecture-article-link span{transition:transform .18s var(--ease)}
+.architecture-article-link:hover span{transform:translate(3px,-3px)}
 .architecture-shell{display:grid;grid-template-columns:234px 1fr;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 22px 60px rgba(14,65,74,.08)}
 .architecture-tabs{display:flex;flex-direction:column;padding:16px;border-right:1px solid var(--line);background:#eef7f7}
 .architecture-tab{display:grid;grid-template-columns:30px 1fr;gap:10px;width:100%;padding:19px 16px;border:1px solid transparent;border-radius:12px;background:transparent;text-align:left;cursor:pointer;transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s var(--ease)}
@@ -396,6 +399,7 @@ button{font:inherit;color:inherit}
   .diagram-frame img{min-width:710px;max-width:none}
   .diagram-frame figcaption{position:sticky;left:0;max-width:310px}
   .capability-list{grid-template-columns:1fr}
+  .architecture-article-link{grid-column:1;justify-self:start}
   .capability-list article,.capability-list article:nth-child(even){padding:24px 0;border-left:0}
   .capability-list article:last-child{border-bottom:0}
   .window-thumbs{grid-template-columns:1fr 1fr}

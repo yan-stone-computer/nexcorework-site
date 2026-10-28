@@ -2,7 +2,7 @@
 
 零依赖静态官网，展示 NexcoreWork 的本地优先架构、可核验执行过程、免费模型Auto、工具与知识能力。
 
-当前视觉围绕 NexcoreWork Logo 的嫩绿、薄荷青与湖蓝展开：浅色产品层、深色执行舱、真实 Windows 与 Android 截图，以及可切换的记忆、存储和视觉架构图。
+当前视觉围绕 NexcoreWork Logo 的嫩绿、薄荷青与湖蓝展开：浅色产品层、深色执行舱、真实 Windows 与 Android 截图，以及可切换的执行、记忆、存储、视觉、上下文和权限六组架构图。
 
 ## 本地预览
 
@@ -27,7 +27,7 @@ python -m http.server 8096
 - 产品界面为 NexcoreWork 真实截图。
 - 产品截图均带固定宽高，首屏图片优先加载，首屏以下图片懒加载。
 - 首屏抽象配图由本地 ComfyUI Qwen-Image-2.1 生成，记录在 `assets/manifest.json`。
-- 记忆、存储与视觉架构图是可编辑 SVG，产品语义以当前实现为准。
+- 六组核心架构图是可编辑 SVG，产品语义以当前实现为准。
 - 页面无外部字体和前端依赖，适合直接部署到 GitHub Pages。
 
 ## 验收

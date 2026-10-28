@@ -29,6 +29,24 @@
       "type": "vision-evidence-architecture",
       "source": "hand-authored SVG",
       "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/agent-loop.svg",
+      "type": "agent-execution-loop",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/context.svg",
+      "type": "context-budget-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/security.svg",
+      "type": "tool-permission-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
     }
   ],
   "screenshots": {
