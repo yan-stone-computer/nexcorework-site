@@ -209,7 +209,7 @@ button { font: inherit; color: inherit; }
 .site-footer > div { display: flex; gap: 22px; font-size: 11px; color: rgba(240, 238, 229, .56); }
 .site-footer > small { font-family: var(--mono); font-size: 9px; color: rgba(240, 238, 229, .28); }
 
-.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 620ms var(--ease), transform 620ms var(--ease); }
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 620ms var(--ease), transform 620ms var(--ease); transition-delay: var(--reveal-delay, 0ms); }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (max-width: 1100px) {

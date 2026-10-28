@@ -24,7 +24,27 @@ if ("IntersectionObserver" in window) {
       observer.unobserve(entry.target);
     }
   }, { threshold: 0.12 });
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item, index) => {
+    item.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+    observer.observe(item);
+  });
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const navLinks = [...document.querySelectorAll('.site-header nav a[href^="#"]')];
+if ("IntersectionObserver" in window && navLinks.length) {
+  const sections = navLinks
+    .map(link => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+    .filter(item => item.section);
+  const activeSection = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      for (const { link, section } of sections) {
+        if (section === entry.target) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      }
+    }
+  }, { rootMargin: "-35% 0px -55%", threshold: 0 });
+  sections.forEach(({ section }) => activeSection.observe(section));
 }
