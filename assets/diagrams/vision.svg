@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">NexcoreWork 视觉处理架构</title>
+  <desc id="desc">上传图片或文档后，本地先做 OCR、结构与元数据提取，再由视觉模型分析，融合为可追溯证据，最后交给文本模型。原始大图不直接进入主对话上下文。</desc>
+  <defs>
+    <marker id="arrow-vision" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#0b8797"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7fbfc"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <g id="n:input">
+      <rect x="42" y="150" width="148" height="190" rx="20" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <circle cx="116" cy="194" r="26" fill="#e2f7f5"/>
+      <rect x="102" y="182" width="28" height="22" rx="4" fill="none" stroke="#0aa8cf" stroke-width="2"/>
+      <circle cx="111" cy="190" r="3" fill="#18b795"/>
+      <path d="m104 202 8-7 6 5 6-7" fill="none" stroke="#0aa8cf" stroke-width="2"/>
+      <text x="116" y="246" text-anchor="middle" font-size="19" font-weight="700" fill="#18323b">图片 / 文档</text>
+      <text x="116" y="275" text-anchor="middle" font-size="14" fill="#58737d">截图、照片、</text>
+      <text x="116" y="297" text-anchor="middle" font-size="14" fill="#58737d">PDF 与办公文件</text>
+    </g>
+
+    <g id="n:local-parse">
+      <rect x="230" y="126" width="174" height="238" rx="20" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <text x="258" y="166" font-size="13" font-weight="700" fill="#0d7387" letter-spacing="1.3">LOCAL FIRST</text>
+      <text x="258" y="199" font-size="20" font-weight="700" fill="#18323b">本地解析</text>
+      <rect x="258" y="220" width="118" height="36" rx="8" fill="#eef8f8"/>
+      <text x="275" y="244" font-size="14" fill="#274955">Windows OCR</text>
+      <rect x="258" y="266" width="118" height="36" rx="8" fill="#eef8f8"/>
+      <text x="275" y="290" font-size="14" fill="#274955">结构与版面</text>
+      <text x="258" y="332" font-size="13" fill="#58737d">先提取可验证文本</text>
+    </g>
+
+    <g id="n:vision-model">
+      <rect x="444" y="126" width="188" height="238" rx="20" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="474" y="166" font-size="13" font-weight="700" fill="#0b7d6c" letter-spacing="1.3">VISION ROUTE</text>
+      <text x="474" y="199" font-size="20" font-weight="700" fill="#18323b">视觉理解</text>
+      <rect x="474" y="222" width="128" height="38" rx="9" fill="#ffffff" stroke="#bfe9df"/>
+      <text x="494" y="247" font-size="14" fill="#274955">免费视觉模型</text>
+      <rect x="474" y="270" width="128" height="38" rx="9" fill="#ffffff" stroke="#bfe9df"/>
+      <text x="494" y="295" font-size="14" fill="#274955">外部多模态</text>
+      <text x="474" y="338" font-size="13" fill="#58737d">按任务与可用性路由</text>
+    </g>
+
+    <g id="n:fusion">
+      <rect x="672" y="150" width="146" height="190" rx="20" fill="#10272f"/>
+      <text x="698" y="190" font-size="13" font-weight="700" fill="#6fe5be" letter-spacing="1.2">EVIDENCE</text>
+      <text x="698" y="222" font-size="20" font-weight="700" fill="#f4fbfc">证据融合</text>
+      <text x="698" y="254" font-size="14" fill="#bad3d9">正文与表格</text>
+      <text x="698" y="280" font-size="14" fill="#bad3d9">版面与对象</text>
+      <text x="698" y="306" font-size="14" fill="#bad3d9">来源与不确定项</text>
+    </g>
+
+    <g id="n:text-agent">
+      <rect x="856" y="170" width="70" height="150" rx="18" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="891" y="216" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">主</text>
+      <text x="891" y="240" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">智</text>
+      <text x="891" y="264" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">能</text>
+      <text x="891" y="288" text-anchor="middle" font-size="17" font-weight="700" fill="#18323b">体</text>
+    </g>
+
+    <g fill="none" stroke="#0b8797" stroke-width="2.4" marker-end="url(#arrow-vision)">
+      <path d="M190 245h36"/>
+      <path d="M404 245h36"/>
+      <path d="M632 245h36"/>
+      <path d="M818 245h34"/>
+    </g>
+    <path d="M360 390h360" fill="none" stroke="#18b795" stroke-width="2" stroke-dasharray="7 7"/>
+    <text x="420" y="418" font-size="14" fill="#466873">原始大图留在本地，只向主模型提交结构化证据</text>
+  </g>
+</svg>

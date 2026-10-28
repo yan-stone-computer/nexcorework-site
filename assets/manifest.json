@@ -1,0 +1,38 @@
+{
+  "generated": [
+    {
+      "path": "assets/generated/nexcore-hero-bloom.webp",
+      "type": "hero-atmosphere",
+      "generator": "ComfyUI Qwen-Image-2.1",
+      "license": "Qwen Research License Agreement",
+      "seed": 1075626118420434171,
+      "width": 1152,
+      "height": 768,
+      "prompt": "A premium abstract hero illustration for a local AI agent platform: one elegant translucent neural bloom made of sweeping ribbons, tiny connected glass nodes and fine mint fiber lines, emerging from a subtle sprout-like stem. Strong brand palette based on spring green, saturated mint and clear cyan on a pale blue-white studio background, with a large clean area on the left for text. Crisp high-end editorial 3D render, no words, letters, logos, people, interface cards, or clutter."
+    }
+  ],
+  "diagrams": [
+    {
+      "path": "assets/diagrams/memory.svg",
+      "type": "project-memory-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/storage.svg",
+      "type": "local-storage-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/vision.svg",
+      "type": "vision-evidence-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
+    }
+  ],
+  "screenshots": {
+    "source": "NexcoreWork Windows 2.0 and Android 2.0",
+    "note": "Product screenshots are used as product evidence, not reconstructed UI."
+  }
+}
