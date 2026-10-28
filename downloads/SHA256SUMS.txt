@@ -1,0 +1,2 @@
+03e4fc291fdb8d3331c89e95fba440a8e141cecafbe4d0a6c1ffb614ef890618  NexcoreWork-Setup-2.0.0.exe
+6e906bd609d722ce92c0e6e2968eaff0a1739f504fee5813e812dcff0f01ce36  NexcoreWork-Mobile-2.0.0.apk
