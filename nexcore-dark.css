@@ -25,7 +25,7 @@ body{color:var(--ink)}
 .site-header nav a[aria-current]{color:var(--acid)}
 .site-header nav a[aria-current]::after{content:"";display:block;height:1px;margin-top:4px;background:var(--acid)}
 .header-cta{border-radius:4px;background:var(--accent-solid);border-color:var(--acid);color:var(--ink);font-weight:650}
-.header-cta:hover{background:#117fa5;color:#fff;border-color:var(--acid-deep)}
+.header-cta:hover{background:#117fa5;color:var(--ink);border-color:var(--acid-deep)}
 .hero{min-height:920px;padding-top:124px;background:#0c0d10;color:var(--ink)}
 .hero::before{background:linear-gradient(90deg,rgba(12,13,16,.98) 0%,rgba(12,13,16,.92) 33%,rgba(12,13,16,.48) 62%,rgba(12,13,16,.8) 100%),url("assets/generated/hero-signal.webp") center right/cover no-repeat}
 .hero::before{will-change:transform;animation:hero-field 22s ease-in-out infinite alternate}
