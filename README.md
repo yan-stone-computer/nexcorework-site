@@ -14,7 +14,8 @@ python -m http.server 8096
 
 ## 下载
 
-官网按钮指向 GitHub Releases 中的 Windows 安装包与 Android APK。当前版本为 `2.0.0`。
+Windows 官网按钮指向 `v2.1.0` Release 中的 `NexcoreWork-Setup-2.1.0.exe`。
+本轮未重建 Android APK，Android 下载继续使用已验证的 `2.0.0` 包。
 
 ## Android 页面
 

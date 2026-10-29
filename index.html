@@ -26,8 +26,8 @@
           <a href="android.html">Android</a>
         </nav>
         <div class="header-actions">
-          <span class="version">v2.0.0</span>
-          <a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe?v=17246888">下载 Windows 版</a>
+          <span class="version">v2.1.0</span>
+          <a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.1.0/NexcoreWork-Setup-2.1.0.exe">下载 Windows 版</a>
           <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="打开导航"><i></i><i></i></button>
         </div>
       </div>
@@ -42,9 +42,9 @@
         <div class="hero-grid shell">
           <div class="hero-copy" data-reveal>
             <h1>把想法，<br>变成<span>完成的工作。</span></h1>
-            <p>NexcoreWork 把模型、工具、文件、项目记忆和执行证据放进同一条工作链。它不只回答问题，还能在你的工作区里持续做事。</p>
+            <p>NexcoreWork 把模型、工具、文件、可解释记忆和执行证据放进同一条工作链。它不只回答问题，还能在你的工作区里持续做事。</p>
             <div class="hero-actions">
-              <a class="button button-primary button-large" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe?v=17246888">下载 Windows 2.0 <span>↗</span></a>
+              <a class="button button-primary button-large" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.1.0/NexcoreWork-Setup-2.1.0.exe">下载 Windows 2.1 <span>↗</span></a>
               <a class="button button-secondary button-large" href="#execution">看一次完整执行 <span>↓</span></a>
             </div>
             <div class="trust-row"><span>Windows 10/11</span><span>本地 SQLite</span><span>免费模型开箱可用</span></div>
@@ -60,7 +60,7 @@
                 <span>NexcoreWork / 工作区</span>
                 <small>本地运行</small>
               </div>
-              <img src="assets/screens/12-深色主题.webp" width="1440" height="1000" alt="NexcoreWork Windows 2.0 深色工作台">
+              <img src="assets/screens/12-深色主题.webp" width="1440" height="1000" alt="NexcoreWork Windows 2.1 深色工作台">
             </div>
             <div class="float-note route-note">
               <span class="note-icon route-icon" aria-hidden="true"></span>
@@ -72,7 +72,7 @@
             </div>
             <div class="float-note verify-note">
               <span class="note-icon verify-icon" aria-hidden="true"></span>
-              <div><small>执行结果</small><strong>180 项检查通过</strong></div>
+              <div><small>执行结果</small><strong>189 项检查通过</strong></div>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
           <div><dt class="metric-number" data-count="30">30</dt><dd>可审计工具</dd></div>
           <div><dt class="metric-number" data-count="68">68</dt><dd>内置技能</dd></div>
           <div><dt class="metric-number" data-count="9">9</dt><dd>专家智能体</dd></div>
-          <div><dt class="metric-number" data-count="180">180</dt><dd>核心测试</dd></div>
+          <div><dt class="metric-number" data-count="189">189</dt><dd>核心测试</dd></div>
         </dl>
       </section>
 
@@ -178,8 +178,8 @@
               <article class="architecture-panel is-active" id="panel-memory" role="tabpanel" aria-labelledby="tab-memory">
                 <div class="panel-copy">
                   <h3>.NexcoreWork 项目记忆</h3>
-                  <p>先写记忆，再执行任务。对话结论、工具事实和文件变化经过写入门控，下一轮按项目、任务和时效重新召回。</p>
-                  <ul><li>写入、只读、关闭三种记忆模式</li><li>对话结束 5 分钟后压缩长期记忆</li><li>记忆文件可查看、修正和删除</li></ul>
+                  <p>先写记忆，再执行任务。结构化事实以工作区 <code>facts.json</code> 为真源，SQLite 作为可重建索引；召回时先做 FTS5 筛选，再进行语义、图谱与重要性混合排序。</p>
+                  <ul><li>短期事件、中期事实、长期关系图谱分层保存</li><li>MMR 去重，软遗忘降低概率但不删除记录</li><li>每次召回保留评分、来源与命中原因</li></ul>
                 </div>
                 <figure class="diagram-frame"><img src="assets/diagrams/memory.svg" width="960" height="540" alt="NexcoreWork 项目记忆架构图" loading="lazy"><figcaption>任务结果先写回项目记忆，下一轮执行前再自动召回。</figcaption></figure>
               </article>
@@ -224,7 +224,7 @@
                 <div class="panel-copy">
                   <h3>工具能做什么，由权限边界决定</h3>
                   <p>每次工具请求先经过策略引擎和服务端校验。文件、命令、网络和密钥读取分别受控，高风险操作绑定当前内容请求审批。</p>
-                  <ul><li>路径限制在用户选择的工作区内</li><li>审批、执行与拒绝都会留下回执</li><li>敏感值只在本地解密并对输出脱敏</li></ul>
+                  <ul><li>路径限制在用户选择的工作区内</li><li>审批绑定具体调用，内容变化后不可复用</li><li>单轮调用上限、连续失败熔断与参数脱敏</li></ul>
                 </div>
                 <figure class="diagram-frame"><img src="assets/diagrams/security.svg" width="960" height="540" alt="NexcoreWork 工具权限与工作区边界架构图"><figcaption>权限策略在工具调用之前生效，执行结果进入审计记录。</figcaption></figure>
               </article>
@@ -241,7 +241,7 @@
           </div>
           <div class="capability-list" data-reveal>
             <article><span>上下文治理</span><p>固定系统规则、项目记忆、历史对话和当前输入分区计量，超限时按顺序压缩。</p><code>context_budget / policy / checkpoint</code></article>
-            <article><span>多智能体协作</span><p>研究、实现、审核和验证可交给不同智能体并行执行，结果统一回到主任务。</p><a href="#windows">查看实际界面 <b>→</b></a></article>
+            <article><span>可解释记忆</span><p>FTS5 候选、图谱扩展、混合评分与 MMR 组成召回链路，每条注入记忆都能追到来源。</p><a href="#architecture">查看记忆架构 <b>→</b></a></article>
             <article><span>免费模型 Auto</span><p>按任务能力、上下文窗口、响应速度和失败情况自动选择免费端点。</p><a href="#models">查看路由方式 <b>→</b></a></article>
             <article><span>能力目录</span><p>工具来源、风险、超时、调用次数和健康状态收在同一张表里。</p><a href="#windows">查看能力目录 <b>→</b></a></article>
           </div>
@@ -266,7 +266,7 @@
               <button class="window-thumb" type="button" aria-pressed="false" data-window-shot="03-执行过程与自检.webp" data-window-title="执行与自检" data-window-alt="NexcoreWork 执行过程与自检"><img src="assets/screens/03-执行过程与自检.webp" width="180" height="125" alt="" loading="lazy"><span>执行自检</span></button>
             </div>
           </div>
-          <div class="windows-cta" data-reveal><span>Windows 10 / 11 · x64 · 安装包约 162 MB</span><a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe?v=17246888">下载安装包 <span>↗</span></a></div>
+          <div class="windows-cta" data-reveal><span>Windows 10 / 11 · x64 · 安装包约 162 MB</span><a class="button button-primary" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.1.0/NexcoreWork-Setup-2.1.0.exe">下载安装包 <span>↗</span></a></div>
         </div>
       </section>
 
@@ -275,7 +275,7 @@
           <div class="model-copy" data-reveal>
             <h2>一个入口，<br>自动选择合适模型。</h2>
             <p>选择“免费模型 Auto”后，NexcoreWork 会按任务类型、能力、上下文窗口和实测响应速度选择端点。点击左侧任务，查看路由结果。</p>
-            <a class="text-link" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe?v=17246888">体验免费模型 Auto <span>→</span></a>
+            <a class="text-link" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.1.0/NexcoreWork-Setup-2.1.0.exe">体验免费模型 Auto <span>→</span></a>
           </div>
           <div class="route-demo" data-reveal>
             <div class="route-tasks" role="group" aria-label="模型任务类型">
@@ -325,12 +325,12 @@
           <div>
             <img class="download-mark" src="assets/brand/logo.svg" width="64" height="64" alt="">
             <h2>下一件事，<br>从工作区开始。</h2>
-            <p>下载 Windows 2.0，选择工作区，然后直接选择“免费模型 Auto”。</p>
+            <p>下载 Windows 2.1，选择工作区，然后直接选择“免费模型 Auto”。</p>
           </div>
           <div class="download-actions">
-            <a class="button button-primary button-large" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Setup-2.0.0.exe?v=17246888">下载 Windows 2.0.0 <span>↗</span></a>
+            <a class="button button-primary button-large" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.1.0/NexcoreWork-Setup-2.1.0.exe">下载 Windows 2.1.0 <span>↗</span></a>
             <a class="button button-secondary button-large" href="https://github.com/yan-stone-computer/nexcorework-site/releases/download/v2.0.0/NexcoreWork-Mobile-2.0.0.apk">下载 Android 版 <span>↗</span></a>
-            <small>Windows 10/11 · x64<br>Android 7.0+ · ARM64</small>
+            <small>Windows 10/11 · x64<br>Android 7.0+ · ARM64（2.0 本轮沿用）</small>
           </div>
         </div>
       </section>
@@ -340,11 +340,11 @@
       <div class="shell footer-inner">
         <a class="brand" href="#top"><img src="assets/brand/logo.svg" width="34" height="34" alt=""><span><strong>Nexcore<span>Work</span></strong><small>本地 · 私有 · 可核验</small></span></a>
         <p>让智能体真的能做事，而且每一步都看得见。</p>
-        <div><a href="#execution">执行</a><a href="#architecture">架构</a><a href="#windows">Windows</a><a href="android.html">Android</a></div>
+        <div><a href="#execution">执行</a><a href="#architecture">架构</a><a href="#windows">Windows</a><a href="android.html">Android</a><a href="https://github.com/yan-stone-computer/NexcoreAgent" target="_blank" rel="noreferrer">开源核心</a></div>
         <small>© 2026 NexcoreWork</small>
       </div>
     </footer>
     <script src="assets/vendor/paper-shaders.js?v=0.0.82" defer></script>
-    <script src="app.js?v=20261028e" defer></script>
+    <script src="app.js?v=20261029a" defer></script>
   </body>
 </html>
