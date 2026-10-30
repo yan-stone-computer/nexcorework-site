@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Chromatic</title>
+  <rect width="64" height="64" rx="16" fill="#1d1d1f"/>
+  <circle cx="18" cy="34" r="11" fill="#ff5a36"/>
+  <circle cx="27" cy="29" r="11" fill="#ffd43b"/>
+  <circle cx="36" cy="34" r="11" fill="#35b8ce"/>
+  <circle cx="45" cy="29" r="11" fill="#8267d8"/>
+  <circle cx="39" cy="39" r="8" fill="#9bbf58"/>
+</svg>
