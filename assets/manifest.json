@@ -50,7 +50,15 @@
     }
   ],
   "screenshots": {
-    "source": "NexcoreWork Windows 2.0 and Android 2.0",
+    "source": "NexcoreWork Windows 2.4.4 and Android 2.4.4",
+    "files": [
+      "assets/screens/nexcorework-2.4.4-light.webp",
+      "assets/screens/nexcorework-2.4.4-dark.webp",
+      "assets/screens/nexcorework-2.4.4-knowledge.webp",
+      "assets/screens/nexcorework-2.4.4-mobile.webp",
+      "assets/screens/android-2.4.4-workspace.webp",
+      "assets/screens/android-2.4.4-knowledge.webp"
+    ],
     "note": "Product screenshots are used as product evidence, not reconstructed UI."
   }
 }
