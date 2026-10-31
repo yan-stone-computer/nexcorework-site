@@ -9,34 +9,33 @@
     <link rel="icon" href="../assets/brand/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
     <style>
-      .work-main { min-height: 100dvh; padding: 140px clamp(22px, 5vw, 82px) 90px; background: var(--paper); }
+      .work-main { min-height: 100dvh; padding: 124px clamp(22px, 5vw, 82px) 90px; background: var(--canvas); }
       .work-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .42fr); gap: clamp(40px, 8vw, 120px); align-items: end; max-width: 1540px; margin: 0 auto 54px; }
-      .work-intro h1 { margin: 0; font-family: var(--display); font-size: clamp(62px, 10vw, 150px); font-weight: 600; line-height: .9; letter-spacing: -.04em; }
+      .work-intro h1 { margin: 0; font-family: var(--sans); font-size: clamp(62px, 10vw, 150px); font-weight: 700; line-height: .9; letter-spacing: -.04em; }
       .work-intro > div > p:last-child { max-width: 620px; margin: 28px 0 0; color: var(--muted); font-size: 17px; line-height: 1.8; }
       .work-meta { margin: 0; border-top: 1px solid var(--line); }
       .work-meta div { display: grid; grid-template-columns: 94px 1fr; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); }
-      .work-meta dt { color: var(--acid-deep); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; }
+      .work-meta dt { color: var(--cyan-solid); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; }
       .work-meta dd { margin: 0; font-size: 13px; }
       .artwork { max-width: 1540px; margin: 0 auto; padding: 12px; border: 1px solid var(--line); border-radius: 28px; background: rgba(255, 255, 255, .32); }
       .artwork img { width: 100%; border-radius: 18px; background: #dce5cc; }
       .artwork figcaption { display: flex; justify-content: space-between; gap: 22px; margin: 13px 5px 2px; color: var(--muted); font-family: var(--mono); font-size: 10px; }
       .artwork a { color: var(--ink); border-bottom: 1px solid currentColor; }
       .work-notes { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(40px, 9vw, 140px); max-width: 1540px; margin: 90px auto 0; padding-top: 34px; border-top: 1px solid var(--line); }
-      .work-notes h2 { margin: 0; font-family: var(--display); font-size: clamp(42px, 5vw, 72px); font-weight: 600; line-height: 1; letter-spacing: -.04em; }
+      .work-notes h2 { margin: 0; font-family: var(--sans); font-size: clamp(42px, 5vw, 72px); font-weight: 700; line-height: 1; letter-spacing: -.04em; }
       .work-steps { margin: 0; padding: 0; list-style: none; }
       .work-steps li { display: grid; grid-template-columns: 38px 1fr; gap: 18px; padding: 0 0 24px; }
       .work-steps li + li { padding-top: 24px; border-top: 1px solid var(--line); }
-      .work-steps span { color: var(--acid-deep); font-family: var(--mono); font-size: 10px; }
+      .work-steps span { color: var(--cyan-solid); font-family: var(--mono); font-size: 10px; }
       .work-steps strong { display: block; font-size: 16px; }
       .work-steps p { margin: 7px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
       .work-back { display: inline-flex; align-items: center; gap: 12px; margin-top: 38px; font-size: 14px; font-weight: 600; border-bottom: 1px solid currentColor; }
-      .work-back span { color: var(--acid-deep); }
+      .work-back span { color: var(--cyan-solid); }
       @media (max-width: 760px) {
-        .work-main { padding: 108px 20px 70px; }
+        .work-main { padding: 94px 20px 70px; }
         .work-intro, .work-notes { grid-template-columns: 1fr; }
         .work-intro { margin-bottom: 38px; }
         .work-intro h1 { font-size: clamp(58px, 19vw, 84px); }
-        .site-header .header-cta { display: inline-flex; padding: 9px 13px; }
         .artwork { padding: 7px; border-radius: 18px; }
         .artwork figcaption { display: grid; }
         .work-notes { margin-top: 66px; }
@@ -46,12 +45,17 @@
   <body>
     <a class="skip-link" href="#work">跳到作品</a>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="返回 NexcoreWork 首页">
-        <img src="../assets/brand/logo.svg" width="42" height="42" alt="">
-        <span><strong>Nexcore<span>Work</span></strong><small>启核 · 本地智能体工作台</small></span>
-      </a>
-      <nav aria-label="作品导航"><a href="#work">完整作品</a><a href="#process">执行过程</a></nav>
-      <a class="header-cta" href="../index.html">返回官网</a>
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="返回 NexcoreWork 首页">
+          <img src="../assets/brand/logo.svg" width="40" height="40" alt="">
+          <span><strong>Nexcore<span>Work</span></strong><small>启核 · 本地智能体工作台</small></span>
+        </a>
+        <nav id="siteNav" aria-label="作品导航"><a href="#work">完整作品</a><a href="#process">执行过程</a></nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="../index.html">返回官网</a>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="打开导航"><i></i><i></i></button>
+        </div>
+      </div>
     </header>
 
     <main class="work-main" id="work">

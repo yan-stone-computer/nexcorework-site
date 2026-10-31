@@ -50,14 +50,7 @@
     }
   ],
   "screenshots": {
-    "source": "NexcoreWork Windows 2.3.0 and mobile 390px layout",
-    "version": "2.3.0",
-    "captured": "2026-10-30",
-    "items": [
-      "assets/screens/nexcorework-2.3-light.webp",
-      "assets/screens/nexcorework-2.3-dark.webp",
-      "assets/screens/nexcorework-2.3-mobile.webp"
-    ],
+    "source": "NexcoreWork Windows 2.0 and Android 2.0",
     "note": "Product screenshots are used as product evidence, not reconstructed UI."
   }
 }
