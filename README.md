@@ -2,7 +2,7 @@
 
 零依赖静态官网，展示 NexcoreWork 的本地优先架构、可核验执行过程、免费模型Auto、工具与知识能力。
 
-当前视觉围绕 NexcoreWork Logo 的嫩绿、薄荷青与湖蓝展开：浅色产品层、深色执行舱、真实 Windows 与 Android 截图，以及可切换的执行、记忆、存储、视觉、上下文和权限六组架构图。
+当前视觉围绕 NexcoreWork Logo 的嫩绿、薄荷青与湖蓝展开：浅色产品层、浅色执行面板、真实 Windows 与 Android 截图，以及可切换的执行、记忆、存储、视觉、上下文和权限六组架构图。
 
 ## 本地预览
 
@@ -14,14 +14,14 @@ python -m http.server 8096
 
 ## 下载
 
-Windows 官网按钮指向 `v2.4.4` Release 中的 `NexcoreWork-Setup-2.4.4.exe`。
-Android 下载使用本轮重新构建的 2.4.4 测试签名 APK。
+Windows 官网按钮指向 `v2.4.5` Release 中的 `NexcoreWork-Setup-2.4.5.exe`。
+Android 下载使用本轮重新构建的 2.4.5 测试签名 APK。
 
 ## Android 页面
 
 `android.html` 是独立的 Android 下载与使用说明页，包含 APK 下载二维码、三步连接流程、
 手机端真实截图、Noise 端到端加密与权限边界说明。所有安装包统一发布到
-`yan-stone-computer/nexcorework-site` 与 `NexcoreWork-Downloads` 的 `v2.4.4` Release。
+`yan-stone-computer/nexcorework-site` 与 `NexcoreWork-Downloads` 的 `v2.4.5` Release。
 
 ## 素材
 
