@@ -50,13 +50,13 @@
     }
   ],
   "screenshots": {
-    "source": "NexcoreWork Windows 2.4.5 and Android 2.4.5",
+    "source": "NexcoreWork Windows 2.4.9 and Android 2.4.9",
     "files": [
-      "assets/screens/nexcorework-2.4.5-light.webp",
-      "assets/screens/nexcorework-2.4.5-knowledge.webp",
-      "assets/screens/nexcorework-2.4.5-mobile.webp",
-      "assets/screens/android-2.4.5-workspace.webp",
-      "assets/screens/android-2.4.5-knowledge.webp"
+      "assets/screens/nexcorework-2.4.9-light.webp",
+      "assets/screens/nexcorework-2.4.9-knowledge.webp",
+      "assets/screens/nexcorework-2.4.9-mobile.webp",
+      "assets/screens/android-2.4.9-workspace.webp",
+      "assets/screens/android-2.4.9-knowledge.webp"
     ],
     "note": "Product screenshots are used as product evidence, not reconstructed UI."
   }
