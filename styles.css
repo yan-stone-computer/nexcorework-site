@@ -115,6 +115,40 @@ button{font:inherit;color:inherit}
 .route-note{right:-16px;top:30px}
 .memory-note{left:-12px;top:303px}
 .verify-note{right:4px;bottom:44px}
+.swarm-stage{position:absolute;z-index:4;inset:58px 8px 58px 50px;overflow:hidden;border:1px solid rgba(79,180,173,.34);border-radius:18px;background:#071c23;box-shadow:0 38px 90px rgba(4,24,30,.34);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .26s ease,visibility .26s ease}
+.hero-product.is-swarming .swarm-stage{opacity:1;visibility:visible}
+.hero-product.is-swarming .product-window{opacity:.16;filter:saturate(.25);transition:opacity .3s ease,filter .3s ease}
+.hero-product.is-swarming .hero-orbit,.hero-product.is-swarming .float-note{opacity:.14;transition:opacity .3s ease}
+.swarm-canvas{position:absolute;inset:38px 18px 49px}
+.swarm-shape{position:absolute;display:block;border:1px solid rgba(112,219,205,.42);background:rgba(45,157,151,.08);transform:scaleX(0);transform-origin:left center;opacity:0;transition:transform .46s var(--ease),opacity .22s ease;will-change:transform,opacity}
+.swarm-shape.is-drawn{transform:scaleX(1);opacity:1}
+.swarm-shell{inset:0;background:rgba(11,38,47,.72)}
+.swarm-rail{left:0;top:0;width:23%;height:100%;background:rgba(26,76,83,.72)}
+.swarm-title-line{left:29%;top:14%;width:34%;height:9%;border-color:rgba(100,223,145,.58);background:rgba(100,223,145,.16)}
+.swarm-copy-line{left:29%;top:29%;width:47%;height:5%;background:rgba(197,235,233,.12)}
+.swarm-panel-a{left:29%;top:43%;width:21%;height:27%}
+.swarm-panel-b{left:52%;top:43%;width:21%;height:27%}
+.swarm-panel-c{left:29%;top:75%;width:44%;height:13%;border-color:rgba(8,168,212,.64);background:rgba(8,168,212,.13)}
+.swarm-prompt{left:76%;top:43%;width:17%;height:45%;border-color:rgba(53,210,170,.62);background:rgba(53,210,170,.09)}
+.swarm-agent{position:absolute;z-index:3;display:flex;align-items:flex-start;gap:4px;color:var(--dark-text);will-change:transform}
+.swarm-agent svg{width:17px;height:23px;fill:var(--mint);stroke:#eafffb;stroke-width:1.2;filter:drop-shadow(0 4px 9px rgba(3,22,27,.5))}
+.swarm-agent small{padding:3px 6px;border:1px solid rgba(154,224,216,.35);border-radius:5px;background:rgba(6,25,31,.88);color:#bde8e2;font:9px/1 var(--mono);letter-spacing:.05em}
+.swarm-agent.is-clicking svg{transform:scale(.86)}
+.swarm-agent.is-clicking::after{position:absolute;left:4px;top:8px;width:30px;height:30px;border:1px solid rgba(100,223,145,.72);border-radius:50%;content:"";animation:swarm-click .46s var(--ease) both}
+.swarm-agent-1{left:12%;top:76%}
+.swarm-agent-2{left:70%;top:70%}
+.swarm-agent-3{left:82%;top:22%}
+.swarm-agent-4{left:56%;top:87%}
+.swarm-agent-5{left:34%;top:56%}
+.swarm-agent-6{left:8%;top:18%}
+.swarm-caption{position:absolute;left:14px;right:14px;bottom:11px;display:flex;align-items:center;gap:8px;min-height:27px;color:#a8c9cb;font-size:10px}
+.swarm-caption i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(100,223,145,.1)}
+.swarm-caption b{font-weight:600}
+.swarm-caption small{margin-left:auto;color:#6f9ca2;font:9px var(--mono);font-variant-numeric:tabular-nums}
+.swarm-replay{position:absolute;z-index:5;left:54px;bottom:10px;display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:7px 10px;border:1px solid rgba(170,219,218,.44);border-radius:999px;background:rgba(251,254,253,.92);color:var(--ink-2);font-size:10px;font-weight:700;cursor:pointer;box-shadow:0 10px 24px rgba(8,47,58,.12);transition:transform .16s var(--ease),background-color .16s ease,color .16s ease}
+.swarm-replay:hover{background:var(--surface);color:var(--ink);transform:translateY(-1px)}
+.swarm-replay:active{transform:scale(.97)}
+.swarm-replay svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .hero-flow{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;color:var(--ink-2);font-size:12px;font-weight:650}
 .hero-flow i{position:relative;width:66px;height:1px;background:var(--line-strong)}
 .hero-flow i::after{position:absolute;right:-1px;top:-2.5px;width:6px;height:6px;border-right:1px solid var(--cyan-solid);border-bottom:1px solid var(--cyan-solid);content:"";transform:rotate(-45deg)}
@@ -320,6 +354,7 @@ button{font:inherit;color:inherit}
 .architecture-panel[hidden]{display:none}
 @keyframes scroll-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes bloom-float{from{transform:translate3d(-1.5%,1.5%,0) scale(1.02)}to{transform:translate3d(1.2%,-1.5%,0) scale(1.05)}}
+@keyframes swarm-click{from{opacity:.85;transform:scale(.25)}to{opacity:0;transform:scale(1.15)}}
 @keyframes status-pulse{0%,100%{box-shadow:0 0 0 5px rgba(100,223,145,.1)}50%{box-shadow:0 0 0 8px rgba(100,223,145,.03)}}
 @keyframes panel-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes route-flash{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:none}}
@@ -385,6 +420,11 @@ button{font:inherit;color:inherit}
   .hero-product{min-height:390px;margin-top:5px}
   .hero-atmosphere{right:-42%;top:240px;width:130%;opacity:.5}
   .product-window{margin:28px 0 0 7px;border-radius:13px;box-shadow:0 22px 42px rgba(34,82,88,.13)}
+  .swarm-stage{inset:24px 0 28px 6px;border-radius:13px}
+  .swarm-canvas{inset:25px 10px 45px}
+  .swarm-agent small{display:none}
+  .swarm-caption{left:9px;right:9px;bottom:8px;font-size:9px}
+  .swarm-replay{left:8px;bottom:2px;min-height:31px;padding:6px 9px;font-size:9px}
   .window-bar{height:31px;font-size:8px}
   .float-note{display:none}
   .hero-orbit{inset:8px -20px 30px -8px}
@@ -455,4 +495,5 @@ button{font:inherit;color:inherit}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .motion-ready [data-reveal]{opacity:1;transform:none}
   .scroll-progress{display:none}
+  .swarm-stage,.swarm-replay{display:none}
 }

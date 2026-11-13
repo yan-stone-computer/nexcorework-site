@@ -14,14 +14,14 @@ python -m http.server 8096
 
 ## 下载
 
-Windows 官网按钮指向 `v2.4.9` Release 中的 `NexcoreWork-Setup-2.4.9.exe`。
-Android 下载使用本轮重新构建的 2.4.9 测试签名 APK。
+Windows 官网按钮指向 `v2.5.2` Release 中的 `NexcoreWork-Setup-2.5.2.exe`。
+Android 下载使用本轮重新构建的 2.5.2 测试签名 APK。
 
 ## Android 页面
 
 `android.html` 是独立的 Android 下载与使用说明页，包含 APK 下载二维码、三步连接流程、
 手机端真实截图、Noise 端到端加密与权限边界说明。所有安装包统一发布到
-`yan-stone-computer/nexcorework-site` 的 `v2.4.9` Release。APK 同时保留在站内
+`yan-stone-computer/nexcorework-site` 的 `v2.5.2` Release。APK 同时保留在站内
 `downloads/` 目录，供 Android 下载页和程序扫码地址统一使用。
 
 ## 素材

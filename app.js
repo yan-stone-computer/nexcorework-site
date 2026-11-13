@@ -116,8 +116,8 @@ const runData = {
   understand: {
     title: "理解与规划",
     meta: "STEP 01 / 04",
-    image: "assets/screens/01-首屏.webp",
-    alt: "NexcoreWork 任务规划界面",
+    image: "assets/screens/nexcorework-2.5.2-light.webp",
+    alt: "NexcoreWork 2.5.2 任务规划界面",
     action: "工作区已锁定",
     trace: "目标 · 约束 · 验收项",
     state: "可继续执行",
@@ -126,8 +126,8 @@ const runData = {
   memory: {
     title: "读取项目记忆",
     meta: "STEP 02 / 04",
-    image: "assets/screens/06-长期记忆.webp",
-    alt: "NexcoreWork 长期记忆管理",
+    image: "assets/screens/nexcorework-2.5.2-knowledge.webp",
+    alt: "NexcoreWork 2.5.2 知识库与项目记忆",
     action: "召回 7 条项目记忆",
     trace: "历史决策 · 命名 · 约束",
     state: "上下文已就绪",
@@ -136,8 +136,8 @@ const runData = {
   tools: {
     title: "调用工具",
     meta: "STEP 03 / 04",
-    image: "assets/screens/11-工具与本地处理.webp",
-    alt: "NexcoreWork 工具调用与本地处理",
+    image: "assets/screens/nexcorework-2.5.2-capabilities.webp",
+    alt: "NexcoreWork 2.5.2 工具能力与本地执行",
     action: "write_file · 38 ms",
     trace: "+186 / -0 · 退出码 0",
     state: "工具调用成功",
@@ -146,8 +146,8 @@ const runData = {
   verify: {
     title: "复核与交付",
     meta: "STEP 04 / 04",
-    image: "assets/screens/03-执行过程与自检.webp",
-    alt: "NexcoreWork 执行过程与自检",
+    image: "assets/screens/nexcorework-2.5.2-settings.webp",
+    alt: "NexcoreWork 2.5.2 权限与运行设置",
     action: "57 项验收已通过",
     trace: "文件 · 页面 · 运行时",
     state: "结果可交付",
@@ -331,4 +331,88 @@ if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").mat
       stage.style.setProperty("--rx", "0deg");
     });
   });
+}
+
+/**
+ * Original cursor-swarm reveal for the product window. The packaged Swarm
+ * Rebuild extension is used as a motion reference only; its unlicensed source
+ * is not copied into this public site.
+ */
+const swarmStage = document.getElementById("swarmStage");
+const swarmReplay = document.getElementById("swarmReplay");
+const heroProduct = swarmStage?.closest(".hero-product");
+const swarmShapes = swarmStage ? [...swarmStage.querySelectorAll("[data-swarm-draw]")] : [];
+const swarmAgents = swarmStage ? [...swarmStage.querySelectorAll("[data-swarm-agent]")] : [];
+const swarmCaption = document.getElementById("swarmCaption");
+const swarmProgress = document.getElementById("swarmProgress");
+let swarmRun = 0;
+let swarmRunning = false;
+
+const swarmWait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const swarmCopy = [
+  "读取项目结构，恢复工作区骨架",
+  "召回项目记忆，找回本轮约束",
+  "调用本地工具，写入界面模块",
+  "核对文件证据，标记可交付",
+  "恢复导航栏，组织主要入口",
+  "构建主视图，展示执行过程",
+  "填入任务输入，连接下一步",
+  "复核完成，打开真实工作台"
+];
+
+async function moveSwarmAgent(agent, shape, token) {
+  if (!agent || !shape || token !== swarmRun) return;
+  const stageRect = swarmStage.getBoundingClientRect();
+  const cursorRect = agent.getBoundingClientRect();
+  const shapeRect = shape.getBoundingClientRect();
+  const currentX = cursorRect.left - stageRect.left - agent.offsetLeft;
+  const currentY = cursorRect.top - stageRect.top - agent.offsetTop;
+  const nextX = shapeRect.left - stageRect.left + shape.offsetWidth * 0.58 - agent.offsetLeft;
+  const nextY = shapeRect.top - stageRect.top + shape.offsetHeight * 0.45 - agent.offsetTop;
+  const duration = 360 + Math.random() * 130;
+  const motion = agent.animate([
+    { transform: `translate3d(${currentX}px,${currentY}px,0)` },
+    { transform: `translate3d(${nextX}px,${nextY}px,0)` }
+  ], { duration, easing: "cubic-bezier(.23,1,.32,1)", fill: "forwards" });
+  await motion.finished.catch(() => {});
+  if (token !== swarmRun) return;
+  agent.classList.add("is-clicking");
+  await swarmWait(130);
+  shape.classList.add("is-drawn");
+  await swarmWait(100);
+  agent.classList.remove("is-clicking");
+}
+
+async function runSwarm(manual = false) {
+  if (reduceMotion || !swarmStage || !heroProduct || swarmRunning) return;
+  swarmRunning = true;
+  const token = ++swarmRun;
+  heroProduct.classList.add("is-swarming");
+  swarmShapes.forEach((shape) => shape.classList.remove("is-drawn"));
+  swarmAgents.forEach((agent) => {
+    agent.classList.remove("is-clicking");
+    agent.style.transform = "translate3d(0,0,0)";
+  });
+  if (swarmCaption) swarmCaption.textContent = "六个协作者正在读取工作区";
+  if (swarmProgress) swarmProgress.textContent = `0 / ${swarmShapes.length}`;
+  await swarmWait(manual ? 80 : 260);
+
+  for (const [index, shape] of swarmShapes.entries()) {
+    if (token !== swarmRun) return;
+    if (swarmCaption) swarmCaption.textContent = swarmCopy[index] || "正在复核工作台";
+    await moveSwarmAgent(swarmAgents[index % swarmAgents.length], shape, token);
+    if (swarmProgress) swarmProgress.textContent = `${index + 1} / ${swarmShapes.length}`;
+  }
+  if (token !== swarmRun) return;
+  if (swarmCaption) swarmCaption.textContent = "工作台已恢复，执行证据可核验";
+  await swarmWait(520);
+  heroProduct.classList.remove("is-swarming");
+  sessionStorage.setItem("nexcore-swarm-seen", "1");
+  await swarmWait(320);
+  swarmRunning = false;
+}
+
+swarmReplay?.addEventListener("click", () => void runSwarm(true));
+if (!reduceMotion && swarmStage && sessionStorage.getItem("nexcore-swarm-seen") !== "1") {
+  window.setTimeout(() => void runSwarm(false), 320);
 }
