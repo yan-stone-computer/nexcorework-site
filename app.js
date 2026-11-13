@@ -116,8 +116,8 @@ const runData = {
   understand: {
     title: "理解与规划",
     meta: "STEP 01 / 04",
-    image: "assets/screens/nexcorework-2.5.2-light.webp",
-    alt: "NexcoreWork 2.5.2 任务规划界面",
+    image: "assets/screens/nexcorework-2.5.3-light.webp",
+    alt: "NexcoreWork 2.5.3 任务规划界面",
     action: "工作区已锁定",
     trace: "目标 · 约束 · 验收项",
     state: "可继续执行",
@@ -126,8 +126,8 @@ const runData = {
   memory: {
     title: "读取项目记忆",
     meta: "STEP 02 / 04",
-    image: "assets/screens/nexcorework-2.5.2-knowledge.webp",
-    alt: "NexcoreWork 2.5.2 知识库与项目记忆",
+    image: "assets/screens/nexcorework-2.5.3-knowledge.webp",
+    alt: "NexcoreWork 2.5.3 知识库与项目记忆",
     action: "召回 7 条项目记忆",
     trace: "历史决策 · 命名 · 约束",
     state: "上下文已就绪",
@@ -136,8 +136,8 @@ const runData = {
   tools: {
     title: "调用工具",
     meta: "STEP 03 / 04",
-    image: "assets/screens/nexcorework-2.5.2-capabilities.webp",
-    alt: "NexcoreWork 2.5.2 工具能力与本地执行",
+    image: "assets/screens/nexcorework-2.5.3-capabilities.webp",
+    alt: "NexcoreWork 2.5.3 工具能力与本地执行",
     action: "write_file · 38 ms",
     trace: "+186 / -0 · 退出码 0",
     state: "工具调用成功",
@@ -146,8 +146,8 @@ const runData = {
   verify: {
     title: "复核与交付",
     meta: "STEP 04 / 04",
-    image: "assets/screens/nexcorework-2.5.2-settings.webp",
-    alt: "NexcoreWork 2.5.2 权限与运行设置",
+    image: "assets/screens/nexcorework-2.5.3-settings.webp",
+    alt: "NexcoreWork 2.5.3 权限与运行设置",
     action: "57 项验收已通过",
     trace: "文件 · 页面 · 运行时",
     state: "结果可交付",
