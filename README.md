@@ -14,8 +14,8 @@ python -m http.server 8096
 
 ## 下载
 
-Windows 官网按钮指向 `v2.5.4` Release 中的 `NexcoreWork-Setup-2.5.4.exe`。
-Android 下载使用本轮重新构建的 2.5.4 测试签名 APK。
+Windows 官网按钮指向 `v2.5.5` Release 中的 `NexcoreWork-Setup-2.5.5.exe`。
+Android 下载使用本轮重新构建的 2.5.5 测试签名 APK。
 
 ## Android 页面
 
