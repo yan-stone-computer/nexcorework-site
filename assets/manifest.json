@@ -47,18 +47,24 @@
       "type": "tool-permission-architecture",
       "source": "hand-authored SVG",
       "license": "NexcoreWork project asset"
+    },
+    {
+      "path": "assets/diagrams/computer-control.svg",
+      "type": "computer-control-architecture",
+      "source": "hand-authored SVG",
+      "license": "NexcoreWork project asset"
     }
   ],
   "screenshots": {
-    "source": "NexcoreWork Windows 2.5.8 and Android 2.5.8",
+    "source": "NexcoreWork Windows 2.5.9 and Android 2.5.9",
     "files": [
-      "assets/screens/nexcorework-2.5.8-light.webp",
-      "assets/screens/nexcorework-2.5.8-knowledge.webp",
-      "assets/screens/nexcorework-2.5.8-capabilities.webp",
-      "assets/screens/nexcorework-2.5.8-models.webp",
-      "assets/screens/nexcorework-2.5.8-settings.webp",
-      "assets/screens/android-2.5.8-workspace.webp",
-      "assets/screens/android-2.5.8-knowledge.webp"
+      "assets/screens/nexcorework-2.5.9-light.webp",
+      "assets/screens/nexcorework-2.5.9-knowledge.webp",
+      "assets/screens/nexcorework-2.5.9-capabilities.webp",
+      "assets/screens/nexcorework-2.5.9-models.webp",
+      "assets/screens/nexcorework-2.5.9-settings.webp",
+      "assets/screens/android-2.5.9-workspace.webp",
+      "assets/screens/android-2.5.9-knowledge.webp"
     ],
     "note": "Product screenshots are used as product evidence, not reconstructed UI."
   }

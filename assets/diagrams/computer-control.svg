@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">NexcoreCtrlComputer 控制平面</title>
+  <desc id="desc">自然语言动作先解析为统一操作协议。语义树可用时优先按角色与名称定位，不可用时才使用窗口级视觉帧。执行后读取目标状态并返回证据回执。</desc>
+  <defs>
+    <marker id="arrow-computer" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#0b8797"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#18b795"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7fbfc"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <g id="n:intent">
+      <rect x="40" y="180" width="150" height="176" rx="20" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <text x="70" y="216" font-size="12" font-weight="700" fill="#0d7387" letter-spacing="1.1">INTENT</text>
+      <text x="70" y="249" font-size="20" font-weight="700" fill="#18323b">自然语言意图</text>
+      <text x="70" y="280" font-size="13" fill="#58737d">打开应用 · 点按钮</text>
+      <text x="70" y="303" font-size="13" fill="#58737d">窗口 · 输入 · 等待</text>
+      <text x="70" y="326" font-size="12" fill="#0b8797">先规范化为统一动作</text>
+    </g>
+
+    <g id="n:observe">
+      <rect x="226" y="84" width="278" height="370" rx="22" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <text x="254" y="121" font-size="12" font-weight="700" fill="#0d7387" letter-spacing="1.1">BOUNDED OBSERVATION</text>
+      <text x="254" y="153" font-size="20" font-weight="700" fill="#18323b">先理解目标，再动手</text>
+      <rect x="252" y="180" width="226" height="100" rx="14" fill="#e8faf5" stroke="#54d0b1"/>
+      <text x="274" y="209" font-size="15" font-weight="700" fill="#18323b">首选：无障碍语义树</text>
+      <text x="274" y="234" font-size="12" fill="#58737d">角色 + 名称 + 当前值</text>
+      <text x="274" y="256" font-size="12" fill="#58737d">命名上下文与紧凑快照</text>
+      <rect x="252" y="306" width="226" height="118" rx="14" fill="#fff7eb" stroke="#e9c98d"/>
+      <text x="274" y="335" font-size="15" font-weight="700" fill="#18323b">兜底：窗口级视觉帧</text>
+      <text x="274" y="360" font-size="12" fill="#58737d">SHA-256 + bounds + 有效期</text>
+      <text x="274" y="382" font-size="12" fill="#58737d">窗口移动或过期后拒绝</text>
+      <text x="274" y="405" font-size="12" fill="#8a6320">只在语义树不可用时启用</text>
+    </g>
+
+    <g id="n:execute">
+      <rect x="544" y="84" width="210" height="370" rx="22" fill="#10272f"/>
+      <text x="572" y="121" font-size="12" font-weight="700" fill="#6fe5be" letter-spacing="1.1">EXECUTE</text>
+      <text x="572" y="153" font-size="20" font-weight="700" fill="#effaf9">统一动作契约</text>
+      <text x="572" y="188" font-size="13" fill="#bad3d9">软件目录 / AUMID 精确启动</text>
+      <text x="572" y="217" font-size="13" fill="#bad3d9">窗口聚焦 · 缩放 · 移动</text>
+      <text x="572" y="246" font-size="13" fill="#bad3d9">点击 · 双击 · 滚动 · 等待</text>
+      <text x="572" y="275" font-size="13" fill="#bad3d9">长文本使用一次原子 paste</text>
+      <text x="572" y="318" font-size="12" fill="#6fe5be">云端不可用时</text>
+      <text x="572" y="342" font-size="13" fill="#effaf9">Windows-MCP 回退</text>
+      <text x="572" y="372" font-size="12" fill="#bad3d9">路由与投递结果进入回执</text>
+    </g>
+
+    <g id="n:verify">
+      <rect x="794" y="132" width="126" height="274" rx="20" fill="#ffffff" stroke="#bcdce4" stroke-width="1.5"/>
+      <text x="820" y="169" font-size="12" font-weight="700" fill="#0d7387" letter-spacing="1.1">PROVE</text>
+      <text x="820" y="202" font-size="19" font-weight="700" fill="#18323b">执行后读回</text>
+      <text x="820" y="238" font-size="12" fill="#58737d">控件文本</text>
+      <text x="820" y="263" font-size="12" fill="#58737d">存在性</text>
+      <text x="820" y="288" font-size="12" fill="#58737d">画面变化</text>
+      <text x="820" y="313" font-size="12" fill="#58737d">窗口状态</text>
+      <line x1="818" y1="335" x2="896" y2="335" stroke="#d7e1e7"/>
+      <text x="820" y="365" font-size="11" fill="#0b7d6c">未确认则保持</text>
+      <text x="820" y="386" font-size="10" font-weight="700" fill="#0b7d6c">delivered_unverified</text>
+    </g>
+
+    <g fill="none" stroke="#0b8797" stroke-width="2.4" marker-end="url(#arrow-computer)">
+      <path d="M190 262h27"/>
+      <path d="M474 223h62"/>
+      <path d="M474 353h62"/>
+      <path d="M754 216h35"/>
+      <path d="M754 326h35"/>
+    </g>
+    <path d="M680 454H274" fill="none" stroke="#18b795" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow-green)"/>
+    <text x="366" y="479" font-size="13" fill="#466873">动作回执回到下一轮，决定继续、修正或停止</text>
+    <text x="41" y="484" font-size="12" fill="#58737d">MIT · NexcoreCtrlComputer 0.6.0</text>
+  </g>
+</svg>
