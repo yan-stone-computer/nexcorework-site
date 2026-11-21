@@ -14,13 +14,14 @@ python -m http.server 8096
 
 ## 下载
 
-Windows 与 Android 官网按钮分别指向 GitHub Release `v2.5.9` 的安装资产，下载后可用 `downloads/SHA256SUMS.txt` 核对。
+Windows 按钮指向 GitHub Release `v2.5.9`；Android 使用站内
+`downloads/NexcoreWork-Mobile-2.5.9-debug.apk`，保证程序生成的扫码地址始终可下载。两类安装包均可用 `downloads/SHA256SUMS.txt` 核对。
 
 ## Android 页面
 
 `android.html` 是独立的 Android 下载与使用说明页，包含 APK 下载二维码、三步连接流程、
-手机端真实截图、Noise 端到端加密与权限边界说明。安装包统一发布到
-GitHub Release `v2.5.9`，站内 `downloads/` 只保留版本清单与校验文件。
+手机端真实截图、Noise 端到端加密与权限边界说明。Android APK 同时保留站内文件，
+供二维码和网页下载共用同一份二进制。
 
 ## 素材
 
